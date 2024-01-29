@@ -302,7 +302,7 @@ train_data = df_prophet[df_prophet['ds'] < '2022-01-01']
 test_data = df_prophet[df_prophet['ds'] >= '2022-01-01']
 
 model = Prophet()
-model.fit(train_data)
+model.fit(df_prophet)
 
 future = model.make_future_dataframe(periods=365)
 forecast = model.predict(future)
