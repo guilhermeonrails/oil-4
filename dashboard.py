@@ -26,7 +26,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("Dados de referência")
-    st.dataframe(df)
+    st.dataframe(df, width=600)
 
 with col2:
     max_price_row = df.loc[df['preco'].idxmax()]
